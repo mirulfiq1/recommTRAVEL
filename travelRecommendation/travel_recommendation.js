@@ -37,6 +37,11 @@ function displayResults(results) {
     });
 }
 
+// Ensure the results are displayed right below the search box
+const searchContainer = document.getElementById('search-container');
+const resultsDiv = document.createElement('div');
+resultsDiv.id = 'results';
+searchContainer.appendChild(resultsDiv);
 
 const options = { timeZone: 'America/New_York', hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
 const newYorkTime = new Date().toLocaleTimeString('en-US', options);
